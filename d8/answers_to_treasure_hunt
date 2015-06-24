@@ -1,0 +1,29 @@
+How many routes does this project have? (rake routes will not work for those of you who don't have postgres installed yet)
+	17.
+
+How many models?
+	2 models.
+
+How many controllers?
+	3 controllers.
+
+Where does the CRUD logic take place?
+
+
+Which view allows us to create a new treasure?
+	The file new.html.erb in the folder treasures.
+
+Which view allows us to comment on an existing treasure?
+	The file _form.html.erb in the folder comments.
+
+Which view is our home page?
+	The file application.html.erb in the folder layouts.
+
+Which view lists all the treasures?
+	The file index.html.erb in the folder treasures.
+
+Which attributes belong to treasures? And comments?
+
+
+Which file displays the attributes for each model?
+	schema.rb.
