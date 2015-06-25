@@ -1,7 +1,23 @@
-<%= link_to "New Animal", new_animal_path %>
+<h1>Animal Names</h1>
+	<%= link_to "New Animal", new_animal_path %>
 
-<ul>
-	<% @animals.each do |animal| %>
-		<li><%= link_to animal.name, animal_path(animal) %></li>
-	<% end %>
-</ul>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>ID</th>
+    <th colspan="2"></th>
+  </tr>
+
+  <% @animals.each do |animal| %>
+  	<tr>
+      <td><%= animal.name %></td>
+      <td><%= link_to 'Show', animal_path(animal) %></td>
+      <!-- <td><%= link_to animal.name, animal_path(animal) %></td> -->
+      <td><%= link_to 'Edit', animal_path(animal) %></td>
+       <td><%= link_to 'Destroy', animal_path(animal),
+       			method: :delete,
+       			data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+
+  <% end %>
+</table>

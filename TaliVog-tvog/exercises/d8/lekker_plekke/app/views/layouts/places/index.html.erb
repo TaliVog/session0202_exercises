@@ -1,0 +1,15 @@
+<h1>Place Names</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th colspan="2"></th>
+  </tr>
+
+  <% @places.each do |place| %>
+  	<tr>
+      <td><%= place.name %></td>
+      <td><%= link_to 'Show', place_path(place) %></td>
+    </tr>
+  <% end %>
+</table>
