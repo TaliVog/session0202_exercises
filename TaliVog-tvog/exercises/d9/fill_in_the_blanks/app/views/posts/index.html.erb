@@ -1,0 +1,22 @@
+<h1>Post Names</h1>
+	<%= link_to "New Post", new_post_path %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>ID</th>
+    <th colspan="2"></th>
+  </tr>
+
+  <% @posts.each do |post| %>
+  	<tr>
+      <td><%= post.bru_name %></td>
+      <td><%= link_to 'Show', post_path(post) %></td>
+      <td><%= link_to 'Edit', post_path(post) %></td>
+       <td><%= link_to 'Destroy', post_path(post),
+       			method: :delete,
+       			data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+
+  <% end %>
+</table>
