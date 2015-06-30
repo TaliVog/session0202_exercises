@@ -15,7 +15,7 @@ class AnimalsController < ApplicationController
 		@animal = Animal.new(animal_params)
 
 		if @animal.save
-			redirect_to @animal
+			redirect_to @animal, notice: "Animal successfully created."
 		else
 			render 'new'
 		end
